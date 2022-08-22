@@ -2,14 +2,14 @@
 import { useState } from 'react';
 import './App.css';
 import Alert from './components/Alert';
-import About from './components/About';
+// import About from './components/About';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
-import {
-  BrowserRouter as Router,
-  Route, 
-  Routes
-} from "react-router-dom"
+// import {
+//   BrowserRouter as Router,
+//   Route, 
+//   Routes
+// } from "react-router-dom"
 
 function App() {
   const [Mod, setMod] = useState('light');
@@ -36,17 +36,19 @@ function App() {
     }
   }
   return (
-    <Router>
+    // <Router>
+    <>
     <Navbar title="TextUtils" aboutText="About Us" mode={Mod} toggleMode={toggleMode}/>
     <Alert alert={alert}/>
     <div className="container my-3">
-      <Routes>
+      {/* <Routes>
         <Route path="/about" element={<About/>}/>
         <Route path="/" element={<TextForm heading="Enter Your Text Below." showAlert={showAlert} mode={Mod}/>}/>
-      </Routes>
+      </Routes> */}
+      <TextForm heading="Enter Your Text Below." showAlert={showAlert} mode={Mod}/>
     </div>
-    </Router>
-  );
+    </>
+);
 }
 
 export default App;
