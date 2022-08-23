@@ -27,7 +27,7 @@ export default function TextForm(props) {
             return c;
         }
         for(let i=0;i<word.length;i++){
-            if(word.charAt(i)=== ' ' && i!==word.length-1){
+            if((word.charAt(i)=== ' ' && i!==word.length-1)||(word.charAt(i)==='\n' && i!==word.length-1)){
                 c=c+1;
             }
         }

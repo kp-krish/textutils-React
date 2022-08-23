@@ -43,6 +43,7 @@ function App() {
       <Routes>
         <Route path="/about" element={<About/>}/>
         <Route path="/" element={<TextForm heading="Enter Your Text Below." showAlert={showAlert} mode={Mod}/>}/>
+        <Route path="/textutils-React" element={<TextForm heading="Enter Your Text Below." showAlert={showAlert} mode={Mod}/>}/>
       </Routes>
       {/* <TextForm heading="Enter Your Text Below." showAlert={showAlert} mode={Mod}/> */}
     </div>
